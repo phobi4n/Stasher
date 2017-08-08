@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/png;image/jpeg;
+Icon=da
+Actions=stash
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Stash
+X-KDE-Submenu[it]=Converti in
+
+[Desktop Action stash]
+Name=Upload
+Icon=da
+Exec=stasher "%F"
