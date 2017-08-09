@@ -5,3 +5,7 @@ To install
 ```
  sudo ./install.sh
 ```
+
+## Usage
+In Dolphin file manager, select one or more images, right click, then Sta.sh > Upload. 
+In a terminal, stasher file1.png file2.jpg file3.webm ...

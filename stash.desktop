@@ -6,7 +6,7 @@ Icon=da
 Actions=stash
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
-X-KDE-Submenu=Stash
+X-KDE-Submenu=Sta.sh
 X-KDE-Submenu[it]=Converti in
 
 [Desktop Action stash]
