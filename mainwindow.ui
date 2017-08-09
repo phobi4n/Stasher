@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>310</width>
+    <width>315</width>
     <height>305</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Stasher</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -77,19 +77,18 @@ color: rgb(14, 170, 118);</string>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="statusLabel">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="text">
           <string/>
          </property>
         </widget>
        </item>
       </layout>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="checkBox">
-      <property name="text">
-       <string>Close on finish</string>
-      </property>
      </widget>
     </item>
     <item row="3" column="1">

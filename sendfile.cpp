@@ -17,7 +17,7 @@ void sendFile::start(QString fileLocation)
     QFile data(fileLocation, this);
     if (data.open(QIODevice::ReadOnly)) {
         reply = qnam->put (QNetworkRequest(url2), data.readAll());
-        qDebug() << reply->error();
+        //qDebug() << reply->error();
 
         connect(reply, SIGNAL(uploadProgress(qint64, qint64)), this, SLOT(uploadProgress2(qint64, qint64)));
         connect(qnam, SIGNAL(finished(QNetworkReply *)), this, SLOT(uploadDone(QNetworkReply *)));
@@ -27,14 +27,14 @@ void sendFile::start(QString fileLocation)
         else
             emit workDone("Connection error");
     }
-    else
-    {
-        qDebug() << "Could not open file to sendFile";
+    else {
+        emit workDone("Bad filename given.");
     }
 }
 
 void sendFile::uploadProgress2(qint64 done, qint64 total) {
     double percent = 0.0;
+
     if (done > 0 && total > 0)
         percent = ( done*100 )/total;
 
@@ -42,18 +42,16 @@ void sendFile::uploadProgress2(qint64 done, qint64 total) {
 }
 
 void sendFile::uploadDone(QNetworkReply *) {
-    qDebug() << "Error Code: " << reply->error();
-    QString networkResult("");
+    QString networkResult("Unknown error.");
 
-    switch( reply->error()) {
+    switch (reply->error()) {
     case QNetworkReply::NoError:
         networkResult = "Done";
         break;
     case QNetworkReply::AuthenticationRequiredError:
-        networkResult = "Bad username or password";
+        networkResult = "Bad login or FTP not enabled\nin account settings.";
         break;
     default:
-        networkResult = "Unknown error";
         break;
     }
 

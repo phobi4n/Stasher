@@ -45,13 +45,17 @@ void MainWindow::on_pushButton_2_clicked()
     settings.setValue("user", userString);
     settings.setValue("pass", passString);
 
+    ui->statusLabel->setText("Starting...");
+
     QEventLoop pause;
     connect(&upload, SIGNAL(workDone(QString)), &pause, SLOT(quit()));
 
     for (qint8 i=0; i<m_number; i++) {
+        if (ui->statusLabel->text().startsWith("Bad"))
+            break;
         upload.start(m_files.at(i));
+        ui->statusLabel->setText(m_files.at(i));
         pause.exec();
-        qDebug() << "Tired of waiting";
     }
 }
 
