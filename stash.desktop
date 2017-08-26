@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
-MimeType=image/png;image/jpeg;
+MimeType=image/png;image/jpeg;image/svg+xml;image/gif;image/bmp;video/webm;video/x-matroska;video/ogg;video/mpeg;video/mp4;video/x-theora+ogg;video-ogm+ogg;
 Icon=da
 Actions=stash
 X-KDE-Priority=TopLevel
