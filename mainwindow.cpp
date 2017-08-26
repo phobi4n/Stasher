@@ -22,6 +22,7 @@ MainWindow::MainWindow(const QStringList &files, const qint8 &number,  QWidget *
     if(m_number == 0) {
         ui->statusLabel->setText("Nothing to upload.");
         ui->pushButton_2->setDisabled(true);
+        ui->closeButton->setFocus();
     }
     else if (m_number == 1)
         ui->statusLabel->setText(m_files.at(0));
