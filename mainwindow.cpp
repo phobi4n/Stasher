@@ -67,6 +67,8 @@ void MainWindow::showYell(qint8 percent)
 void MainWindow::showResult(QString answer)
 {
     ui->statusLabel->setText(answer);
+    if (answer == "Done")
+        ui->closeButton->setFocus();
 }
 
 

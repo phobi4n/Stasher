@@ -7,28 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>315</width>
-    <height>305</height>
+    <height>311</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Stasher</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(218, 229, 214);</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="styleSheet">
-       <string notr="true">font: 75 20pt &quot;Noto Sans&quot;;
-color: rgb(14, 170, 118);</string>
-      </property>
-      <property name="text">
-       <string>Sta.sh</string>
-      </property>
-      <property name="textFormat">
-       <enum>Qt::PlainText</enum>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="0" colspan="3">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -37,16 +26,27 @@ color: rgb(14, 170, 118);</string>
       <layout class="QFormLayout" name="formLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(51, 124, 164);</string>
+         </property>
          <property name="text">
           <string>Username</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="userEdit"/>
+        <widget class="QLineEdit" name="userEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(248, 248, 248);
+border-color: rgb(255, 0, 127);</string>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(51, 124, 164);</string>
+         </property>
          <property name="text">
           <string>Password</string>
          </property>
@@ -54,6 +54,9 @@ color: rgb(14, 170, 118);</string>
        </item>
        <item row="1" column="1">
         <widget class="QLineEdit" name="passEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(248, 248, 248);</string>
+         </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
          </property>
@@ -70,6 +73,15 @@ color: rgb(14, 170, 118);</string>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QProgressBar" name="progressBar">
+         <property name="styleSheet">
+          <string notr="true">QProgressBar {
+font-color: white;
+text-align: center;
+}
+QProgressBar::chunk {
+background-color: rgb(52, 151, 195);
+}</string>
+         </property>
          <property name="value">
           <number>0</number>
          </property>
@@ -83,6 +95,9 @@ color: rgb(14, 170, 118);</string>
            <height>30</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(51, 124, 164);</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -93,6 +108,10 @@ color: rgb(14, 170, 118);</string>
     </item>
     <item row="3" column="1">
      <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 227, 213);
+color: rgb(51, 124, 164);</string>
+      </property>
       <property name="text">
        <string>Upload</string>
       </property>
@@ -105,11 +124,29 @@ color: rgb(14, 170, 118);</string>
       </property>
      </widget>
     </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(71, 92, 77);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/da.svg&quot; width=&quot;28&quot; height=&quot;22&quot;/&gt;&lt;span style=&quot; font-family:verdana;font-size:24pt; font-weight:600; color:#ffffff;&quot;&gt;Sta.sher&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/images/da.svg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>closeButton</sender>
