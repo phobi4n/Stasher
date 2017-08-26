@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QFile>
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
@@ -8,6 +9,7 @@ int main(int argc, char *argv[])
 
     QStringList fileNames = QCoreApplication::arguments();
     fileNames.removeFirst();
+
     qint8 fileCount = fileNames.count();
 
     // Quick file check before proceeding

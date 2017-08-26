@@ -51,11 +51,11 @@ void MainWindow::on_pushButton_2_clicked()
     QEventLoop pause;
     connect(&upload, SIGNAL(workDone(QString)), &pause, SLOT(quit()));
 
-    for (qint8 i=0; i<m_number; i++) {
+    for (upload_counter = 0; upload_counter < m_number; upload_counter++) {
         if (ui->statusLabel->text().startsWith("Bad"))
             break;
-        upload.start(m_files.at(i));
-        ui->statusLabel->setText(m_files.at(i));
+        upload.start(m_files.at(upload_counter));
+        ui->statusLabel->setText(m_files.at(upload_counter));
         pause.exec();
     }
 }
@@ -68,8 +68,10 @@ void MainWindow::showYell(qint8 percent)
 void MainWindow::showResult(QString answer)
 {
     ui->statusLabel->setText(answer);
-    if (answer == "Done")
+    if ((answer == "Done") && (upload_counter == m_number - 1)) {
         ui->closeButton->setFocus();
+        ui->pushButton_2->setDisabled(true);
+    }
 }
 
 

@@ -75,7 +75,6 @@ border-color: rgb(255, 0, 127);</string>
         <widget class="QProgressBar" name="progressBar">
          <property name="styleSheet">
           <string notr="true">QProgressBar {
-font-color: white;
 text-align: center;
 }
 QProgressBar::chunk {
@@ -109,8 +108,7 @@ background-color: rgb(52, 151, 195);
     <item row="3" column="1">
      <widget class="QPushButton" name="pushButton_2">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(214, 227, 213);
-color: rgb(51, 124, 164);</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Upload</string>

@@ -27,6 +27,7 @@ private:
     QStringList m_files;
     qint8 m_number;
     sendFile upload;
+    qint8 upload_counter;
 
     Ui::MainWindow *ui;
 };
