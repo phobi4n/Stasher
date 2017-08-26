@@ -12,4 +12,4 @@ X-KDE-Submenu[it]=Converti in
 [Desktop Action stash]
 Name=Upload
 Icon=da
-Exec=stasher "%F"
+Exec=stasher %F
